@@ -1,0 +1,82 @@
+ALTERACOES NO DB
+---------------------------------------------------------------------------
+laudo_item_anexo
+	- adicionado campo indice int
+
+laudo_modelo_item, laudo_item
+	-adicionado campo parent int
+		deve conter id do item pai (se este item for um sub-item)
+
+
+ALTERACOES NOS ARQUIVOS
+---------------------------------------------------------------------------
+
+CORREÇÃO:
+
+	url:/painel/proposta/editar/
+		
+		erro: erro ao atulizar (alterar) a forma de pagamento
+
+		arquivos alterados:
+			public/js/proposta.js
+			public/js/proposta-modelo-pagto.js
+--------------------------------------------------------------------------
+ATUALIZACAO
+	
+	url:/painel/laudo/laudo/
+
+	ANEXOS
+		atualização: adicionar a funcao de ordenação (clicar e arrastar nas imagens dos itens do LAUDO)
+		
+		arquivos alterados:
+			App/Controller/ControllerLaudo.php
+			App/View/laudo/editar_laudo.php
+			App/View/laudo/estrutura_anexo.php
+			App/View/laudo/functions.php
+			App/DAO/LaudoDAO.php
+--------------------------------------------------------------------------
+ATUALIZACAO
+	
+	url:/painel/laudo/laudo/
+
+	PDF
+		Ordenar as imagens por Indice ao montar no PDF
+
+		arquivos alterados
+		App/Controller/ControllerLaudo.php
+		App/DAO/LaudoDAO.php
+		Src/Includes/laudo-anexo-template.php
+		Src/Includes/anexo-template.php
+-------------------------------------------------------------------------
+ATUALIZACAO
+
+	url: /Painel/laudo/cert
+
+	CERTIFICADO:
+		adicionar mais 1 certificado, pois são 2 certificados que sao enviados.
+
+		arquivos alterados:
+			App/Controller/ControllerLaudo.php
+			public/js/scripts_laudo.js
+			App/View/Laudo/cert.php
+			App/View/Laudo/editar_lauto.php
+------------------------------------------------------------------------
+ATUALIZACAO
+	atualzacao: adicionar campos para editar titulo e subtitulo
+
+		Arquios alterados
+			Src/Classes/GeradorLAUDOPDF.php
+			App/Model/LaudoModeloDAO.php
+
+ATUALIZACAO
+
+	atualizacao: adicionar campos de formatacao de titulo e sub-titulos.
+
+		Arquivos modificados
+			App/Model/LaudoModelo.php
+			App/Model/LaudoItem.php
+
+			App/View/Laudo/model_laudo.php
+			App/Controller/ControllerLaudo.php
+			App/Controller/ControllerLaudoModelo.php
+			public/css/style.css

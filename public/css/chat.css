@@ -1,0 +1,21 @@
+.chat{
+	display:none;
+	position: fixed;
+	width: 350px;
+	right: 26px !important;
+	height: 300px;
+	z-index: 888;
+  	bottom: -23px;
+  	transition: .5s;
+}
+.chat-body{
+	z-index:99;
+	background:#fff;
+}
+
+.btn-chat-header{
+	float:right;
+	color:#fff;
+	margin-right:15px;
+	cursor: pointer;
+}
