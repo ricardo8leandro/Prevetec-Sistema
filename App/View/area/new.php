@@ -1,5 +1,6 @@
 <?php 
     $titulo = "";
+    $subtitulo = "";
     $descricao = "";
     $formId = "formCadastrar";
     $inputName = "novaArea";
@@ -28,6 +29,13 @@
                 <label class="col-lg-1" for="titulo">Titulo</label>
                 <div class="col-lg-12">
                     <input type="text" class="form-control" name="titulo" id="titulo" value="<?= $titulo; ?>" required/>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-lg-1" for="titulo">SubTitulo</label>
+                <div class="col-lg-12">
+                    <input type="text" class="form-control" name="subtitulo" id="subtitulo" value="<?= $subtitulo; ?>" required/>
                 </div>
             </div>
 

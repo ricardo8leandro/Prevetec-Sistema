@@ -8,10 +8,11 @@
 
 		static public function create(Area $area){
 
-			$cols = "cd_area, ds_titulo, ds_cabecalho, ds_rodape, cd_situacao";
+			$cols = "cd_area, ds_titulo, ds_cabecalho, ds_rodape, cd_situacao, ds_subtitulo";
 
 			$vals = "NULL";
 			$vals .= ",'".$area->getTitulo()."' ";
+			$vals .= ",'".$area->getSubTitulo()."' ";
 			$vals .= ",'".$area->getConteudo()."' ";
 			$vals .= ",'' ";
 			$vals .= ",'".$area->getStatus()."' ";
